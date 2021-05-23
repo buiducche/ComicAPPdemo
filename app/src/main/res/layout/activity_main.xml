@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,7 +8,14 @@
     android:orientation="vertical"
     android:background="@color/white"
     tools:context=".MainActivity">
-
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ss.com.bannerslider.Slider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +26,9 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:weightSum="4"
-        android:orientation="horizontal">
+        android:id="@+id/textlayout"
+        android:orientation="horizontal"
+        android:layout_below="@id/banner_slider">
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -37,8 +47,31 @@
             android:background="@drawable/horizontal_line"/>
 
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycle_comic"
+        android:layout_below="@id/textlayout"/>
+
+        <TextView
+            android:id="@+id/noi_bat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycle_comic"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="0dp"
+            android:text="@string/n_i_b_t"
+            android:textColor="@color/Green"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recycle_comic"/>
-</LinearLayout>
+        android:layout_below="@id/noi_bat"
+        android:id="@+id/recycle_comic_larger"/>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
