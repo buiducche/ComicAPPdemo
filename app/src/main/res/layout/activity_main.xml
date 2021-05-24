@@ -24,27 +24,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="6dp"
         android:weightSum="4"
         android:id="@+id/textlayout"
         android:orientation="horizontal"
         android:layout_below="@id/banner_slider">
+
         <TextView
+            android:id="@+id/txt_comic"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_comic"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:text="@string/new_comic"
-            android:textColor="@color/Green"
-            android:layout_weight="2">
-        </TextView>
-        <View
-            android:layout_width="0dp"
             android:layout_weight="2"
-            android:layout_height="4dp"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/horizontal_line"/>
+            android:layout_marginStart="17dp"
+            android:text="@string/new_comic"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"></TextView>
 
     </LinearLayout>
 
@@ -63,8 +58,8 @@
             android:layout_marginStart="21dp"
             android:layout_marginTop="0dp"
             android:text="@string/n_i_b_t"
-            android:textColor="@color/Green"
-            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             android:textStyle="bold"></TextView>
 
         <androidx.recyclerview.widget.RecyclerView

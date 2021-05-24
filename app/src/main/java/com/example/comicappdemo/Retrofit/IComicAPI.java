@@ -1,6 +1,7 @@
 package com.example.comicappdemo.Retrofit;
 
 import com.example.comicappdemo.Model.Banner;
+import com.example.comicappdemo.Model.Chapter;
 import com.example.comicappdemo.Model.Comic;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -11,6 +12,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public interface IComicAPI {
     Gson gson = new GsonBuilder()
@@ -26,4 +28,6 @@ public interface IComicAPI {
 
     @GET("comic")
     Call<List<Comic>> getComicList();
+    @GET("chapter/{id}")
+    Call<List<Chapter>> getChapterList(@Path("id") int comicId);
 }

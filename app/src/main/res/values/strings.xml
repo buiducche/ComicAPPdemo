@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ComicAPPdemo</string>
     <string name="todo">TODO</string>
-    <string name="new_comic">NEW COMIC</string>
+    <string name="new_comic">Đề Xuất</string>
     <string name="doraemon">Doraemon</string>
-    <string name="n_i_b_t">Nổi bật</string>
+    <string name="n_i_b_t">Nổi Bật</string>
 </resources>
